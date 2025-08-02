@@ -3,10 +3,12 @@ name: Maven CI
 on:
   push:
     branches: [ master ]
+    tags:
+      - 'v*'
   pull_request:
     branches: [ master ]
   release:
-    types: [published]
+    types: [published, created, released]
 
 jobs:
   build:
