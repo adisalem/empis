@@ -31,6 +31,10 @@ public class Employee {
         return salary;
     }
 
+    //getage
+    public int getAge() {
+        return LocalDate.now().getYear() - dateOfBirth.getYear();
+    }
 
     @Override
     public String toString() {
